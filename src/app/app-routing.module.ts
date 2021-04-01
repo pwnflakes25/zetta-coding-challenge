@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstChallengeComponent } from './first-challenge/first-challenge.component';
+import { SecondChallengeComponent } from './second-challenge/second-challenge.component';
 
 const routes: Routes = [
   {
     path: '',
     component: FirstChallengeComponent,
-  }
+  },
+  {
+    path: 'second',
+    component: SecondChallengeComponent,
+  },
 ];
 
 @NgModule({

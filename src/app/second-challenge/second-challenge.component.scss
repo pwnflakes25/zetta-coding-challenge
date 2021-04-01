@@ -1,0 +1,150 @@
+main{
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    section {
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0rem 2rem;
+            margin-top: -10rem;
+
+            .card {
+                cursor: pointer;
+                transition: transform 0.5s, box-shadow 0.5s;
+
+                &:hover {
+                    transform: scale(1.02);
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+
+                &:active {
+                    transform: scale(0.98);
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                }
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 15rem;
+                margin-right: 1rem;
+                border: none;
+                border-radius: 0;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                .card-header{
+                    background-color: #38383E;
+                    color: white;
+                    border-radius: 0;
+
+                    span{
+                        margin-left: auto;
+                        font-size: 12px;
+                        float: right;
+                    }
+                }
+
+                .card-body {
+                    padding: 1rem;
+                }
+
+                .price-number{
+                    text-align: center;
+                    font-size: 48px;
+                    font-weight: 200;
+                    
+
+                    span {
+                        font-size: 16px;
+                        color: #c4c4c4;
+                    }
+
+                    span:nth-child(1) {
+                        vertical-align: text-top;
+                    }
+                }
+
+                .divider{
+                    content: "";
+                    border-top: 1px solid;
+                    border-color: #f5f5f5;
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+
+                .details {
+                    margin: 1rem 0;
+                    span {
+                        font-weight: bold;
+                    }
+                }
+
+                .button-container {
+                    display: flex;
+                    justify-content: center;
+                    margin: 10px 0;
+                    .btn {
+                        margin: 0 auto;
+                        height: 2rem;
+                        font-size: 12px;
+                    }
+                }
+
+                
+            }
+        }
+
+        .subheading{
+            font-size: 28px;
+            margin: 4rem 0;
+            color: #23395b;
+        }
+
+        .questions-box{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 50%;
+
+            .question {
+                flex: 1;
+                margin: 1rem;
+
+                p:nth-child(1) {
+                    color: #23395b;
+                }
+
+                p:nth-child(2) {
+                    color: #8f8f8f;
+                }
+            }
+        }
+    }
+
+    section:nth-child(1) {
+        background-color: #23395b;
+        height: 350px;
+
+        p {
+            color: white;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        p:nth-child(1) {
+            font-size: 36px;
+        }
+        p:nth-child(2) {
+            max-width: 30em;
+            opacity: 0.8;
+        }
+    }
+}
