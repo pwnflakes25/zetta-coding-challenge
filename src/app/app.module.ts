@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FirstChallengeComponent } from './first-challenge/first-challenge.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SecondChallengeComponent } from './second-challenge/second-challenge.component';
+import { ThirdChallengeComponent } from './third-challenge/third-challenge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstChallengeComponent,
-    SecondChallengeComponent
+    SecondChallengeComponent,
+    ThirdChallengeComponent
   ],
   imports: [
     BrowserModule,

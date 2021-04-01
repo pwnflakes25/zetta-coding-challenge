@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstChallengeComponent } from './first-challenge/first-challenge.component';
 import { SecondChallengeComponent } from './second-challenge/second-challenge.component';
+import { ThirdChallengeComponent } from './third-challenge/third-challenge.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'second',
     component: SecondChallengeComponent,
+  },
+  {
+    path: 'third',
+    component: ThirdChallengeComponent,
   },
 ];
 
