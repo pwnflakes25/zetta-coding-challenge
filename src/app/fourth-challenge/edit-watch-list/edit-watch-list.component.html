@@ -1,0 +1,25 @@
+<form [formGroup]='movieForm' (ngSubmit)="onSubmit(movieForm)">
+    <mat-form-field appearance="legacy">
+        <mat-label>Movie Title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Amount of episodes</mat-label>
+        <input type="number" matInput formControlName="episodes">
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Movie Information URL</mat-label>
+        <input matInput formControlName="infoUrl"> 
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Movie watch URL</mat-label>
+        <input matInput formControlName="watchUrl">
+      </mat-form-field>
+      <mat-dialog-actions align="end">
+        <button mat-raised-button color='accent' mat-dialog-close>Cancel</button>
+        <div [ngSwitch]="isEdit">
+            <button mat-raised-button color='primary' type="submit" value="submit" *ngSwitchCase="true">Save</button>
+            <button mat-raised-button color='primary' *ngSwitchDefault>Add</button>
+        </div>
+      </mat-dialog-actions>
+</form>

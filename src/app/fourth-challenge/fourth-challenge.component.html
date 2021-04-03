@@ -1,0 +1,39 @@
+<main>
+    <div id="title">
+        <p>My Movie Watch List</p>
+    </div>
+    <div class="content">
+        <div id="addButtonContainer">
+            <button mat-raised-button color='primary' id="addButton" (click)='onAdd()'>Add Movie</button>
+        </div>
+        <div class="card">
+            <table mat-table [dataSource]="movies_data">
+                <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef> Title </th>
+                    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+                </ng-container>
+                <ng-container matColumnDef="episodes">
+                    <th mat-header-cell *matHeaderCellDef> Episodes </th>
+                    <td mat-cell *matCellDef="let element"> {{element.episodes}} </td>
+                </ng-container>
+                <ng-container matColumnDef="info_url">
+                    <th mat-header-cell *matHeaderCellDef> Info URL </th>
+                    <td mat-cell *matCellDef="let element"><a [href]="element.info_url" target="_blank">info</a></td>
+                </ng-container>
+                <ng-container matColumnDef="watch_url">
+                    <th mat-header-cell *matHeaderCellDef> Watch URL </th>
+                    <td mat-cell *matCellDef="let element"><a [href]="element.watch_url" target="_blank">watch now</a></td>
+                </ng-container>
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let element">
+                        <button class="btn" (click)=onEdit(element.id)><i class="fas fa-edit"></i></button>
+                        <button class="btn" (click)='onDelete(element.id)'><i class="fas fa-trash-alt"></i></button>
+                    </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="columns"></tr>
+                <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+            </table>
+        </div>
+    </div>
+</main>
